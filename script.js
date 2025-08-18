@@ -344,7 +344,7 @@ function getMaterialsForClass(className, level = null, device = null) {
             ],
             
         "㉟ 경제전략": [
-                { name: "?", ratio: 4, requiresQuantity: true },
+                { name: "유인물", ratio: 4, requiresQuantity: true },
             ],
 
     };
@@ -713,3 +713,4 @@ document.querySelectorAll('.level-input input').forEach(option => {
         }
     });
 });
+
