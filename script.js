@@ -32,7 +32,7 @@ function getMaterialsForClass(className, level = null, device = null) {
     const materials = {
         "① 신소재(메타물질)": [
             { name: "우드락판", ratio: 4, requiresQuantity: true }, // 4명당 1개의 교구 | 필요한 교구 수 = (총 학생 수 × 반 개수) ÷ ratio
-            { name: ["키트(나무판, 수수깡, 글루건, 이면지, 가위, 풍량측정기)"], ratio: null, requiresQuantity: true },
+            { name: ["키트(나무판, 수수깡, 글루건, 색종이, 가위, 풍량측정기)"], ratio: null, requiresQuantity: true },
             { name: ["선풍기","보조배터리", "멀티탭"] },
             ],
 
@@ -58,14 +58,21 @@ function getMaterialsForClass(className, level = null, device = null) {
         "④ 스마트팩토리": [
                 { name: "스마트팜용 유킷", ratio: 1, requiresQuantity: true },
                 { name: ["기물"] },
-                { name: "실습 휴대폰", ratio: 1, requiresQuantity: true },
+                { name: "실습 스마트폰", ratio: 1, requiresQuantity: true },
             ],
 
-        "⑤ 신재생에너지": [
+        "⑤ 신재생에너지": { 
+            "기본": [
                 { name: ["레고브릭", "바퀴", "할로겐등"] },
                 { name: "태양광판+USB선풍기", ratio: 1, requiresQuantity: true },
                 { name: ["절연테이프", "색테이프", "네임펜", "글루건", "멀티탭"] },
-            ],    
+            ],
+            "창작": [
+                { name: ["폼보드"] },
+                { name: "똑상키트(글루건, 가위, 칼)", ratio: 2, requiresQuantity: true },
+            ]
+        },
+
 
         "⑥ 머신러닝": {
             "컴퓨터실": [
@@ -101,8 +108,7 @@ function getMaterialsForClass(className, level = null, device = null) {
 
         "⑨ 프롬프트 엔지니어": {
             "컴퓨터실": [
-                { name: ["컴퓨터실 사용"] }, 
-                { name: "3-4교시용 유인물-패들렛", ratio: 1, requiresQuantity: true }, 
+                { name: ["컴퓨터실 사용"] },
             ],
             "교실": [
                 { name: "노트북", ratio: 1, requiresQuantity: true }, 
@@ -123,19 +129,19 @@ function getMaterialsForClass(className, level = null, device = null) {
 
         "⑫ 빅데이터 경제": [
                 { name: "경제 유인물-코팅", ratio: 4, requiresQuantity: true },
-                { name: "머리띠", ratio: 1, requiresQuantity: true },
+                { name: "양세찬게임 키트", ratio: 1, requiresQuantity: true },
                 { name: ["포스트잇"] },
             ],
 
         "⑬ 빅데이터 분석": [
             { name: "태블릿", ratio: 1, requiresQuantity: true },
+            { name: "유인물-출력", ratio: 2, requiresQuantity: true },
             { name: ["터치펜"] },
         ],
 
     
         "⑭ 정보보안": [
-                { name: "금고", ratio: 4, requiresQuantity: true },
-                { name: "유인물-미정", ratio: 4, requiresQuantity: true },
+                { name: "유인물-출력", ratio: 2, requiresQuantity: true },
             ],
 
 
@@ -172,13 +178,13 @@ function getMaterialsForClass(className, level = null, device = null) {
                 { name: "유인물-출력", ratio: 4, requiresQuantity: true }, 
             ],
             "3교시": [
-                { name: ["놀이교구"] },
+                { name: ["선택: 놀이교구"] },
             ]
         },  
 
         "⑲ 크리에이티브 광고 기획": {
             "음향더빙": [
-                { name: "실습 휴대폰", ratio: 1, requiresQuantity: true },
+                { name: "실습 스마트폰", ratio: 1, requiresQuantity: true },
             ],
 
             "과자광고": [
@@ -202,13 +208,13 @@ function getMaterialsForClass(className, level = null, device = null) {
 
         "㉑ 앱 개발": {
             "컴퓨터실": [
-                { name: ["컴퓨터실 사용: 실습 휴대폰"], ratio: 1, requiresQuantity: true },
+                { name: ["컴퓨터실 사용: 실습 스마트폰"], ratio: 1, requiresQuantity: true },
             ],
             "교실": [
                 { name: ["노트북"], ratio: 1, requiresQuantity: true }, 
                 { name: ["충전기·마우스", "멀티탭"] },
                 { name: ["or 태블릿"], ratio: 1, requiresQuantity: true }, 
-                { name: "실습 휴대폰", ratio: 1, requiresQuantity: true },
+                { name: "실습 스마트폰", ratio: 1, requiresQuantity: true },
             ],
         },
 
@@ -251,7 +257,7 @@ function getMaterialsForClass(className, level = null, device = null) {
         "㉖ 시각디자인": {
             "Quiver": [
                 { name: "유인물", ratio: 1, requiresQuantity: true },
-                { name: "실습 휴대폰", ratio: 1, requiresQuantity: true },
+                { name: "실습 스마트폰", ratio: 1, requiresQuantity: true },
                 ],
 
             "AI 캐릭터": [
@@ -283,13 +289,13 @@ function getMaterialsForClass(className, level = null, device = null) {
             "유킷": [
                 { name: "유킷", ratio: 1, requiresQuantity: true }, 
                 { name: ["유킷 박스"], ratio: 4, requiresQuantity: true },
-                { name: "실습 휴대폰", ratio: 1, requiresQuantity: true }, 
+                { name: "실습 스마트폰", ratio: 1, requiresQuantity: true }, 
                 { name: ["배틀맵"], requiresQuantity: true, fixedQuantity: 4 } // 고정 수량: 4
             ],
             "지무": [
                 { name: "지무", ratio: 1, requiresQuantity: true }, 
                 { name: ["유킷 박스"], ratio: 4, requiresQuantity: true },
-                { name: "실습 휴대폰", ratio: 1, requiresQuantity: true }, 
+                { name: "실습 스마트폰", ratio: 1, requiresQuantity: true }, 
             ],
             "네오봇": [
                 { name: "네오봇", ratio: 1, requiresQuantity: true }, 
@@ -301,9 +307,8 @@ function getMaterialsForClass(className, level = null, device = null) {
         "㉚ 디지털 헬스": [
                 { name: "악력기", ratio: 4, requiresQuantity: true }, 
                 { name: "산소포화도측정기", ratio: 4, requiresQuantity: true }, 
-                { name: "폐활량측정기", ratio: 4, requiresQuantity: true }, 
                 { name: "혈압측정기", ratio: 4, requiresQuantity: true }, 
-                { name: "폐활량계 마우스피스", ratio: 1, requiresQuantity: true },
+                { name: "민첩성 테스트기기", ratio: 4, requiresQuantity: true }, 
                 { name: "유인물-출력", ratio: 1, requiresQuantity: true },
             ],
 
@@ -311,8 +316,9 @@ function getMaterialsForClass(className, level = null, device = null) {
         "㉛ 자율주행": [
                 { name: "네오봇", ratio: 1, requiresQuantity: true }, 
                 { name: "네오봇 박스", ratio: 4, requiresQuantity: true }, 
-                { name: "실습 휴대폰", ratio: 1, requiresQuantity: true }, 
-                { name: ["자율주행맵"], requiresQuantity: true, fixedQuantity: 6 } // 고정 수량: 6
+                { name: "실습 스마트폰", ratio: 1, requiresQuantity: true }, 
+                { name: ["자율주행맵"], requiresQuantity: true, fixedQuantity: 6 }, // 고정 수량: 6
+                { name: ["심화-자율주행맵"], requiresQuantity: true, fixedQuantity: 3 } // 고정 수량: 3
         ],
 
         "㉜ 모빌리티": {
@@ -343,8 +349,14 @@ function getMaterialsForClass(className, level = null, device = null) {
                 { name: ["상세표-코팅"] },
             ],
             
-        "㉟ 경제전략": [
-                { name: "유인물", ratio: 4, requiresQuantity: true },
+        "㉟ 경제 전략": [
+                { name: "유인물", requiresQuantity: true, fixedQuantity: 6 }, // 고정 수량: 6
+            ],
+
+        "㊱ 바이오 파이썬": [
+                { name: "노트북", ratio: 1, requiresQuantity: true },
+                { name: ["충전기·마우스", "멀티탭"] },
+                { name: ["or 태블릿"], ratio: 1, requiresQuantity: true },
             ],
 
     };
