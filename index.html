@@ -89,6 +89,9 @@
         <div class="material-item">
             <input type="checkbox" id="class-5" name="class5" value="⑤ 신재생에너지"> <span>⑤ 신재생에너지</span>
             <input type="number" name="count5" min="1" value="1" class="number-input">
+            <!-- ✅ 기존 radio → checkbox로 변경하여 다중 선택 가능하게 변경 -->
+            <label class="level-input"><input type="checkbox" name="level5" value="기본" onclick="autoCheck('class-5')"> 기본</label>
+            <label class="level-input"><input type="checkbox" name="level5" value="창작" onclick="autoCheck('class-5')"> 창작</label>
         </div>
     </div>
 
@@ -149,8 +152,8 @@
         </div>
 
         <div class="material-item">
-            <input type="checkbox" id="class-31" name="class31" value="⑭ 정보보안"> <span>⑭ 정보보안</span>
-            <input type="number" name="count31" min="1" value="1" class="number-input">
+            <input type="checkbox" id="class-32" name="class32" value="⑭ 정보보안"> <span>⑭ 정보보안</span>
+            <input type="number" name="count32" min="1" value="1" class="number-input">
         </div>
     </div>
 
@@ -300,22 +303,28 @@
     
         <!--경영 분야 -->
         <div class="category-container category-management">
-            <h3>💼 기업가 정신</h3>
+            <h3>💼 기업가 정신+추가</h3>
 
         <div class="material-item">
-            <input type="checkbox" id="class-32" name="class32" value="㉝ 스타트업 설계"> <span>㉝ 스타트업 설계</span>
-            <input type="number" name="count32" min="1" value="1" class="number-input">
-        </div>
-
-        <div class="material-item">
-            <input type="checkbox" id="class-33" name="class33" value="㉞ IMC(통합마케팅커뮤니케이션)"> <span>㉞ IMC(통합마케팅커뮤니케이션)</span>
+            <input type="checkbox" id="class-33" name="class33" value="㉝ 스타트업 설계"> <span>㉝ 스타트업 설계</span>
             <input type="number" name="count33" min="1" value="1" class="number-input">
         </div>
 
         <div class="material-item">
-            <input type="checkbox" id="class-34" name="class34" value="㉟ 경제 전략"> <span>㉟ 경제 전략</span>
+            <input type="checkbox" id="class-34" name="class34" value="㉞ IMC(통합마케팅커뮤니케이션)"> <span>㉞ IMC(통합마케팅커뮤니케이션)</span>
             <input type="number" name="count34" min="1" value="1" class="number-input">
         </div>
+
+        <div class="material-item">
+            <input type="checkbox" id="class-35" name="class35" value="㉟ 경제 전략"> <span>㉟ 경제 전략</span>
+            <input type="number" name="count35" min="1" value="1" class="number-input">
+        </div>
+
+        <div class="material-item">
+            <input type="checkbox" id="class-36" name="class36" value="㊱ 바이오 파이썬"> <span>㊱ 바이오 파이썬</span>
+            <input type="number" name="count36" min="1" value="1" class="number-input">
+        </div>
+
     </div>
 
         <!-- 메모 입력 -->
